@@ -35,7 +35,7 @@ const SmallCards = ({ data }) => {
 				{data && (
 					<div className={styles.cards}>
 						<ul className={styles.confirmedCard}>
-							<li className={styles.header}>{confirmed.text}</li>
+							<div className={styles.header}>{confirmed.text}</div>
 							<img src={global} alt="covid" className={styles.cardImage} />
 							<CountUp
 								start={0}
