@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './SmallCards.module.scss';
+import death from '../images/death.jpg';
 import covid from '../images/covid.jpg';
+import global from '../images/global.png';
 import CountUp from 'react-countup';
 
 const SmallCards = ({ data }) => {
@@ -33,12 +35,12 @@ const SmallCards = ({ data }) => {
 				{data && (
 					<div className={styles.cards}>
 						<ul className={styles.confirmedCard}>
-							<img src={covid} alt="covid" className={styles.cardImage} />
-							<li className={styles.text}>{confirmed.text}</li>
+							<li className={styles.header}>{confirmed.text}</li>
+							<img src={global} alt="covid" className={styles.cardImage} />
 							<CountUp
 								start={0}
 								end={confirmed.value}
-								duration={2}
+								duration={3}
 								separator=","
 							/>{' '}
 							<li className={styles.text}>{update.text}</li>
@@ -47,12 +49,12 @@ const SmallCards = ({ data }) => {
 							</li>
 						</ul>
 						<ul className={styles.recoveredCard}>
+							<li className={styles.header}>{recovered.text}</li>
 							<img src={covid} alt="covid" className={styles.cardImage} />
-							<li className={styles.text}>{recovered.text}</li>
 							<CountUp
 								start={0}
 								end={recovered.value}
-								duration={2}
+								duration={3}
 								separator=","
 							/>{' '}
 							<li className={styles.text}>{update.text}</li>
@@ -61,12 +63,12 @@ const SmallCards = ({ data }) => {
 							</li>
 						</ul>
 						<ul className={styles.deathCard}>
-							<img src={covid} alt="covid" className={styles.cardImage} />
-							<li className={styles.text}>{deaths.text}</li>
+							<li className={styles.header}>{deaths.text}</li>
+							<img src={death} alt="covid" className={styles.cardImage} />
 							<CountUp
 								start={0}
 								end={deaths.value}
-								duration={2}
+								duration={3}
 								separator=","
 							/>
 							<li className={styles.text}>{update.text}</li>

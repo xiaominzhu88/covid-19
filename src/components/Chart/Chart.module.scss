@@ -1,6 +1,11 @@
-form {
-	background-color: rgb(212, 226, 223);
-	padding: 0 10px;
+.bar {
+	padding: 0;
+	@media screen and (min-width: 768px) {
+		padding: 0;
+	}
+}
+
+.pie {
 	p {
 		font-weight: bold;
 		color: rgb(13, 206, 206);
@@ -12,7 +17,6 @@ form {
 	.option {
 		height: 30px;
 		margin-bottom: 15px;
-
 		@media screen and (min-width: 768px) {
 			font-size: 15px;
 			letter-spacing: 0.5px;
